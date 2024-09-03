@@ -29,6 +29,7 @@
             gap: 20px;
         }
         .grid-item {
+            position: relative;
             background: #fff;
             padding: 10px;
             border: 1px solid #ddd;
@@ -40,9 +41,34 @@
             height: auto;
             border-bottom: 1px solid #ddd;
             margin-bottom: 10px;
+            transition: opacity 0.3s ease;
+        }
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 5px;
+        }
+        .grid-item:hover .hover-img {
+            opacity: 1;
+        }
+        .grid-item.active .hover-img {
+            opacity: 1;
+        }
+        .grid-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .grid-item a:hover {
+            text-decoration: underline;
         }
 
-        /* Add the new styling for the download buttons here */
+  /* Add the new styling for the download buttons here */
 .grid-item a {
     text-decoration: none;
     color: #fff; /* Text color set to white */
@@ -105,23 +131,69 @@
         <h2>CV Templates</h2>
        <div class="grid-container">
             <!-- First set of grid items -->
-            <div class="grid-item">
+            <div class="grid-item" onclick="toggleImage(this)">
                 <img src="CV1.png" alt="Thumbnail of CV 1">
+                <img src="Coverletter1.png" alt="Cover Letter 1" class="hover-img">
                 <a href="CV1.docx" download>Download CV 1</a>
-                <a href="CoverLetter1.docx" download>Download Cover Letter 1</a>
+                <a href="Coverletter1.docx" download>Download Cover Letter 1</a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="toggleImage(this)">
                 <img src="CV2.png" alt="Thumbnail of CV 2">
+                <img src="Coverletter2.png" alt="Cover Letter 2" class="hover-img">
                 <a href="CV2.docx" download>Download CV 2</a>
-                <a href="CoverLetter2.docx" download>Download Cover Letter 2</a>
+                <a href="Coverletter2.docx" download>Download Cover Letter 2</a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="toggleImage(this)">
                 <img src="CV3.png" alt="Thumbnail of CV 3">
+                <img src="Coverletter3.png" alt="Cover Letter 3" class="hover-img">
                 <a href="CV3.docx" download>Download CV 3</a>
-                <a href="CoverLetter3.docx" download>Download Cover Letter 3</a>
+                <a href="Coverletter3.docx" download>Download Cover Letter 3</a>
             </div>
-            <!-- Add more grid items as needed -->
+            <!-- Second set of grid items -->
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV4.png" alt="CV 4 Thumbnail">
+                <img src="Coverletter4.png" alt="Cover Letter 4" class="hover-img">
+                <a href="CV4.docx" download>Download CV 4</a>
+                <a href="Coverletter4.docx" download>Download Cover Letter 4</a>
+            </div>
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV5.png" alt="CV 5 Thumbnail">
+                <img src="coverletter5.png" alt="Cover Letter 5" class="hover-img">
+                <a href="CV5.docx" download>Download CV 5</a>
+                <a href="Coverletter5.docx" download>Download Cover Letter 5</a>
+            </div>
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV6.png" alt="CV 6 Thumbnail">
+                <img src="Coverletter6.png" alt="Cover Letter 6" class="hover-img">
+                <a href="CV6.docx" download>Download CV 6</a>
+                <a href="Coverletter6.docx" download>Download Cover Letter 6</a>
+            </div>
+            <!-- Third set of grid items -->
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV7.png" alt="CV 7 Thumbnail">
+                <img src="coverletter7.png" alt="Cover Letter 7" class="hover-img">
+                <a href="CV7.docx" download>Download CV 7</a>
+                <a href="Coverletter7.docx" download>Download Cover Letter 7</a>
+            </div>
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV8.png" alt="CV 8 Thumbnail">
+                <img src="Coverletter8.png" alt="Cover Letter 8" class="hover-img">
+                <a href="CV8.docx" download>Download CV 8</a>
+                <a href="Coverletter8.docx" download>Download Cover Letter 8</a>
+            </div>
+            <div class="grid-item" onclick="toggleImage(this)">
+                <img src="CV9.png" alt="CV 9 Thumbnail">
+                <img src="Coverletter9.png" alt="Cover Letter 9" class="hover-img">
+                <a href="CV9.docx" download>Download CV 9</a>
+                <a href="Coverletter9.docx" download>Download Cover Letter 9</a>
+            </div>
         </div>
     </section>
+
+    <script>
+        function toggleImage(element) {
+            element.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
